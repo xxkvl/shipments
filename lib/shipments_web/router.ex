@@ -15,8 +15,7 @@ defmodule ShipmentsWeb.Router do
 
   scope "/", ShipmentsWeb do
     pipe_through :browser
-
-    get "/", PageController, :index
+    resources "/", RefundController, only: [:index, :create, :new, :show]
   end
 
   # Other scopes may use custom stacks.

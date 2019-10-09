@@ -1,0 +1,56 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+<div class="row">
+  <div class="col-6">
+    <%= label f, :first_name%>
+    <%= text_input f, :first_name %>
+    <%= error_tag f, :first_name %>
+  </div>
+  <div class="col-6">
+    <%= label f, :last_name %>
+    <%= text_input f, :last_name %>
+    <%= error_tag f, :last_name %>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <%= label f, :address %>
+    <%= textarea f, :address %>
+    <%= error_tag f, :address %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <%= label f, :cost_center %>
+    <%= text_input f, :cost_center %>
+    <%= error_tag f, :cost_center %>
+  </div>
+  <div class="col-6">
+    <%= label f, :carrier %>
+    <%= text_input f, :carrier %>
+    <%= error_tag f, :carrier %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <%= label f, :device_model %>
+    <%= text_input f, :device_model %>
+    <%= error_tag f, :device_model %>
+  </div>
+  <div class="col-6">
+    <%= label f, :device_esn %>
+    <%= text_input f, :device_esn %>
+    <%= error_tag f, :device_esn %>
+  </div>
+</div>
+  <div class="row">
+    <div class="col">
+      <%= submit "Save", class: "btn btn-success"%>
+    </div>
+  </div>
+<% end %>

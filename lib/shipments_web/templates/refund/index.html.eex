@@ -1,0 +1,28 @@
+<%= link "New Refund", to: Routes.refund_path(@conn, :new), class: "btn btn-primary"%>
+<br>
+<br>
+<table class="table table-hover">
+  <thead class="">
+    <tr>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Device model</th>
+
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for refund <- @refunds do %>
+    <tr>
+      <td><%= refund.first_name %></td>
+      <td><%= refund.last_name %></td>
+      <td><%= refund.device_model %></td>
+
+      <td>
+        <span><%= link "More...", to: Routes.refund_path(@conn, :show, refund), class: "btn btn-primary"%></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
