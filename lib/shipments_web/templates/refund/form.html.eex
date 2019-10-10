@@ -17,7 +17,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-12">
     <%= label f, :address %>
     <%= textarea f, :address %>
     <%= error_tag f, :address %>
@@ -49,8 +49,8 @@
   </div>
 </div>
   <div class="row">
-    <div class="col">
-      <%= submit "Save", class: "btn btn-success"%>
+    <div class="col-12">
+      <%= submit "Save", class: "btn btn-success btn-block"%>
     </div>
   </div>
 <% end %>
